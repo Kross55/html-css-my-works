@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6{
 
     width: 100%;
     height: 100vh;/*100% высоты открытого браузера*/
-    background: url("../images/hockey.jpg") center no-repeat;
+    background: url("../images/image1.jpg") center no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
     
@@ -126,10 +126,11 @@ h1, h2, h3, h4, h5, h6{
     transition: color 0.2s linear;
 }
 /*для нижнего подчёркивания*/
-.nav__link::after{
+.nav__link:after{
     content: "";
     display: block;
-    width: 60px;
+    /*длинна линии будет соответствовать слову*/
+    width: 100%;
     height: 3px;
 
     background-color: #fce38a;
@@ -147,8 +148,13 @@ h1, h2, h3, h4, h5, h6{
     color: #fce38a;    
 }
 /*для нижнего подчёркивания*/
-.nav__link:hover::after{
+.nav__link:hover:after,
+.nav__link.active:after{
     opacity: 1;    
+}
+
+.nav__link.active{
+    color: #fce38a;
 }
 
 /*Button*/
@@ -174,8 +180,15 @@ h1, h2, h3, h4, h5, h6{
 }
 
 /*Slider*/
-.intro__slider{
-    margin-top: 60px;
+.slider{
+    width: 100%;
+    /*помещаем в нижний левый угол*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+.slider__inner{
     display: flex;
     justify-content: space-between;
 }
@@ -184,6 +197,7 @@ h1, h2, h3, h4, h5, h6{
     width: 23%;
     padding: 20px 0;
     opacity: .7;
+    position: relative;
     
     border-top: 3px solid #fff;
 
@@ -191,6 +205,25 @@ h1, h2, h3, h4, h5, h6{
     color: #fff;
     text-transform: uppercase;
 }
+
+.slider__item.active{
+    opacity: 1;
+}
+
+.slider__item.active:before{
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+
+    background-color: #f38181;
+
+    position: absolute;
+    top: -3px;
+    left: 0;
+    z-index: 1;
+}
+
 
 .slider__number{
     font-size: 24px;
