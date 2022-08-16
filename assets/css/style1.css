@@ -61,8 +61,8 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .letter__inner{
-    width: 30px;
-    height: 30px;
+    width: 45px;
+    height: 45px;
 
     position: absolute;
     top: 50%;
@@ -76,6 +76,40 @@ h1, h2, h3, h4, h5, h6{
     justify-content: center;
 }
 
+.picture{
+    padding: 10px 0;
+    position: relative;
+}
+.picture:hover{
+    color: #1B1BDD;    
+}
+
+.picture:after{
+    content: "";
+    display: block;
+    width: 2px;
+    /*высота линии будет соответствовать блоку*/
+    height: 100%;
+
+    background-color: #1B1BDD;
+    opacity: 0;
+
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 1;
+}
+
+.picture:hover:after,
+.picture.active:after{
+    opacity: 1;    
+}
+
+.nav__link.active{
+    color: #fce38a;
+    margin: 
+}
+
 .logo{
     display: grid;
     grid-template-areas: 
@@ -83,28 +117,27 @@ h1, h2, h3, h4, h5, h6{
     "3 4";
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    width: 40px;
-    height: 40px;
-    margin: 0 auto;
-    position: relative;   
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;  
 }
 
 
 .circle{
     display: block;
-    width: 10px;
-    height: 10px;
+    width: 9px;
+    height: 9px;
     border-radius: 50%;
     background-color: #7777EE;
-    margin: 5px auto;
+    margin: 0 auto;
 }
 .squire{
     display: block;
-    width: 10px;
-    height: 10px;
+    width: 9px;
+    height: 9px;
     border-radius: 2px;
     background-color: #1B1BDD;
-    margin: 5px auto;
+    margin: 0 auto;
 }
 
 /*Central*/
@@ -112,6 +145,11 @@ h1, h2, h3, h4, h5, h6{
     background-color: #FAFAFE;
 }
 
+
+
+
+
+/*previous*/
 
 /*Intro*/
 .intro{
@@ -239,6 +277,7 @@ h1, h2, h3, h4, h5, h6{
 
 .nav__link.active{
     color: #fce38a;
+    margin: 
 }
 
 /*Button*/
