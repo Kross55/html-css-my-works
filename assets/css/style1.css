@@ -229,14 +229,111 @@ h1, h2, h3, h4, h5, h6{
     transform: translate(-50%, -50%);
 }
 .lot{
-    display: block;
+    display: flex;
+    justify-content: space-between;
+
     width: 100%;
-    height: 347px;
-    margin-top: 30px;
+    height: 347px;   
 }
 .lot__photo{
     width: 420px;
     height: 100%;
 
+    position: relative;
+}
+.lot__photo__img{
+    width: 420px;
+    height: 100%;
     border-radius: 8px;
+}
+.backCount{
+    width: 380px;
+    height: 68px;
+    border-radius: 4px;
+    position: relative;
+
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+.backCount__inner{
+    width: 147px;
+    height: 28px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+    /* identical to box height */
+
+    letter-spacing: -0.01em;
+    color: #FFFFFF;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.lot__data{
+    width: 450px;
+    height: 100%;
+    position: relative;
+}
+.lot__name{
+    width: 386px;
+    height: 33px;
+    
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 33px;
+    color: #373748;
+    letter-spacing: -0.02em;
+
+    position: absolute;
+    top: 8px;
+    left: 0;
+}
+.lot__currentBid{
+    width: 100%;
+    height: 81px;
+    border-radius: 8px;
+    background: #F6F6FD;
+    position: relative;
+
+    position: absolute;
+    top: 66px;
+    left: 0;
+}
+.lot__currentBid__title{
+    width: 75px;
+    height: 18px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.02em;
+    color: #AEAEAE;
+
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+.lot__currentBid__price{
+    width: 86px;
+    height: 23px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: -0.02em;
+    color: #373748;
+
+    position: absolute;
+    left: 20px;
+    bottom: 15px;
 }
