@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6{
     display: block;
     width: 100%;
     max-width: 1440px;
-    height: 100vh;
+    height: 1024px;
     background: white;
     margin: 0 auto;
     
@@ -40,8 +40,7 @@ h1, h2, h3, h4, h5, h6{
         "left central right";
     grid-template-columns: 
         104px 1fr 350px;
-    grid-template-rows: 100vh;
-    
+    grid-template-rows: 1024px;  
 }
 /*Left*/
 .left{
@@ -70,6 +69,7 @@ h1, h2, h3, h4, h5, h6{
     transform: translate(-50%, -50%);
 }
 
+
 .nav{
     display: flex;
     flex-direction: column;
@@ -77,8 +77,12 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .picture{
+    margin-top: 30px;
     padding: 10px 0;
     position: relative;
+}
+.picture.bottom{
+    margin-top: 270px;
 }
 .picture:hover{
     color: #1B1BDD;    
@@ -96,7 +100,7 @@ h1, h2, h3, h4, h5, h6{
 
     position: absolute;
     top: 0;
-    left: 100%;
+    left: 101px;
     z-index: 1;
 }
 
@@ -105,9 +109,13 @@ h1, h2, h3, h4, h5, h6{
     opacity: 1;    
 }
 
+.img{
+    width: 20px;
+    height: 20px;
+}
+
 .nav__link.active{
     color: #fce38a;
-    margin: 
 }
 
 .logo{
@@ -142,214 +150,93 @@ h1, h2, h3, h4, h5, h6{
 
 /*Central*/
 .central{
+    padding: 40px;
     background-color: #FAFAFE;
 }
-
-
-
-
-
-/*previous*/
-
-/*Intro*/
-.intro{
-    /*размещаем контейнер с заголовками по центру*/
+.top{
+    width: 100%;
+    height: 62px;
+}
+.top__inner{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    width: 100%;
-    height: 100vh;/*100% высоты открытого браузера*/
-    background: url("../images/image1.jpg") center no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-    
-}
-
-.intro__inner{
-    width: 100%;
-    max-width: 880px;
-    margin: 0 auto;
-    /*для всех элементов внутри*/
-    text-align: center;
-}
-
-.intro__suptitle{
-    /*разделяем заголовки*/
-    margin-bottom: 20px;
-    font-family: 'Kaushan Script', cursive;
-    font-size: 72px;
-    color: #fff;
-    
-}
-
-.intro__title{
-    font-size: 150px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #fff;
-    
-    line-height: 1;
-}
-
-.intro__title:after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 3px;
-    margin: 60px auto;
-
-    background-color: #fff;
-}
-
-/*Header*/
-.header{
-    width: 100%;
-    padding-top: 30px;
-    /*было сверху картинки, а стало на ней!*/
-    position: absolute;/*???*/
-    left: 0;
-    top: 0;
-    right: 0;
-    z-index: 1000; 
-}
-
-.header__inner{
-    /*cтавим div и nav в линию*/
-    display: flex;
-    /*прижымаем их к разным сторонам*/
     justify-content: space-between;
-    /*размещаем внутренности блоков по центру*/
     align-items: center;
-
-    text-align: center;
 }
-
-.header__logo{
-    font-size: 30px;
-    font-weight: 700;/*bold*/
-    color: #fff;
-}
-
-/*Nav*/
-.nav{
-    font-size: 14px;
-    text-transform: uppercase;
-    
-}
-.nav__link{
-    /*добавляем пробелы между ссылками*/
-    display: inline-block;
-    vertical-align: top;
-    margin: 15px;
-    position: relative;
-
-    color: #fff;
-    text-decoration: none;
-    /*для плавного перехода цвета*/
-    transition: color 0.2s linear;
-}
-/*для нижнего подчёркивания*/
-.nav__link:after{
-    content: "";
+.top__title{
     display: block;
-    /*длинна линии будет соответствовать слову*/
-    width: 100%;
-    height: 3px;
-
-    background-color: #fce38a;
-    opacity: 0;
-
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1;
-}
-
-.nav__link:hover{
-    color: #fce38a;    
-}
-/*для нижнего подчёркивания*/
-.nav__link:hover:after,
-.nav__link.active:after{
-    opacity: 1;    
-}
-
-.nav__link.active{
-    color: #fce38a;
-    margin: 
-}
-
-/*Button*/
-.btn{
-    display: inline-block;
-    vertical-align: top;
-    padding: 6px 30px; 
-
-    font-size: 14px;
-    font-weight: 700;
-    color: #fff;
-    text-transform: uppercase;
-    text-decoration: none; 
-    
-    border: 3px solid #fff;
-    transition: background-color 0.2s linear, 
-    color .2s linear;
-}
-
-.btn:hover{
-    background-color: #fff;
-    color: #333;
-}
-
-/*Slider*/
-.slider{
-    width: 100%;
-    /*помещаем в нижний левый угол*/
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-}
-.slider__inner{
-    display: flex;
-    justify-content: space-between;
-}
-
-.slider__item{
-    width: 23%;
-    padding: 20px 0;
-    opacity: .7;
+    width: 259px;
+    height: 62px;
     position: relative;
-    
-    border-top: 3px solid #fff;
-
-    font-size: 18px;
-    color: #fff;
-    text-transform: uppercase;
 }
-
-.slider__item.active{
-    opacity: 1;
-}
-
-.slider__item.active:before{
-    content: "";
+.top__title__top{
     display: block;
-    width: 70px;
-    height: 3px;
-
-    background-color: #f38181;
-
-    position: absolute;
-    top: -3px;
-    left: 0;
-    z-index: 1;
-}
-
-
-.slider__number{
+    width: 136px;
+    height: 32px;
+    font-weight: 600;
     font-size: 24px;
-    font-weight: 700;
-}
+    letter-spacing: -0.03em;
+    color: #373748;
 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.top__title__bottom{
+    display: block;
+    width: 100%;
+    height: 20px;
+    font-weight: 300;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.03em;
+
+    color: #AEAEAE;
+
+    position: absolute;
+    top: 42px;
+    left: 0;
+    z-index: 1;
+}
+.top__nav{
+    display: flex;
+}
+.top__input{
+    width: 320px;
+    height: 50px;
+
+    background: #F4F5FB;
+    border-radius: 12px;
+}
+.top__circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 25px;
+    position: relative;
+    
+    border: 1px solid #EEEFF8;
+}
+.top__circle__icon{
+    width: 30px;
+    height: 30px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.lot{
+    display: block;
+    width: 100%;
+    height: 347px;
+    margin-top: 30px;
+}
+.lot__photo{
+    width: 420px;
+    height: 100%;
+
+    border-radius: 8px;
+}
