@@ -78,6 +78,8 @@ h1, h2, h3, h4, h5, h6{
     margin-top: 30px;
     padding: 10px 0;
     position: relative;
+
+    transition: color 0.2s linear;
 }
 .picture.bottom{
     margin-top: 270px;
@@ -339,6 +341,13 @@ h1, h2, h3, h4, h5, h6{
     position: absolute;
     top: 10px;
     right: 10px;
+
+    transition: background-color 0.2s linear, 
+    color .2s linear;
+}
+.lot__currentBid__btn:hover{
+    background: #FFFFFF;
+    color: #3772FF ;
 }
 .lot__date{
     width: 100%;
@@ -749,6 +758,10 @@ h1, h2, h3, h4, h5, h6{
 }
 .right__top{
     width: 100%;
+    height: 273px;
+}
+.right__top__inner{
+    width: 100%;
     height: 180px;
     background: #C4C4C4;
     border-radius: 8px;
@@ -763,7 +776,6 @@ h1, h2, h3, h4, h5, h6{
     position: absolute;
     top: 170px;
     left: 55px;
-    z-index: 1;
 }
 .right__collector__img{
     width: 80px;
@@ -774,4 +786,96 @@ h1, h2, h3, h4, h5, h6{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+.right__collector__data{
+    width: 120px;
+    height: 48px;
+    position: relative;
+
+    position: absolute;
+    top: 235px;
+    left: 160px;
+}
+.right__collector__name{
+    width: 120px;
+    height: 25px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.03em;
+    color: #373748;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.right__collector__collector{
+    width: 100px;
+    height: 18px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.03em;
+    color: #AEAEAE;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.right__title{
+    width: 290px;
+    height: 22px;
+    margin-bottom: 5px;
+
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: -0.03em;
+    color: #373748;
+}
+.right__biography{
+    width: 270px;
+    height: 66px;
+    margin-bottom: 40px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.03em;
+    color: #AEAEAE; 
+}
+.right__btns{
+    width: 230px;
+    height: 42px;
+    margin: 40px auto;
+
+    display: flex;
+    justify-content: space-between;
+}
+.right__btn{
+    width: 96px;
+    height: 42px;
+    background: #3772FF;
+    border-radius: 4px;
+    border: none;
+
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+
+    transition: background-color 0.2s linear, 
+    color .2s linear;
+}
+.right__btn:hover{
+    background: #E5E5E5;
+    color: #3772FF;
+}
+.right__btns__circle{
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid #EEEFF8;
+    position: relative;
 }
