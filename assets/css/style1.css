@@ -25,7 +25,6 @@ h1, h2, h3, h4, h5, h6{
 
 /*Container*/
 .container{
-    display: block;
     width: 100%;
     max-width: 1440px;
     height: 1024px;
@@ -49,7 +48,6 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .letter{
-    display: block;
     width: 46px;
     height: 46px;
     background-color: #1B1BDD;
@@ -132,7 +130,6 @@ h1, h2, h3, h4, h5, h6{
 
 
 .circle{
-    display: block;
     width: 9px;
     height: 9px;
     border-radius: 50%;
@@ -140,7 +137,6 @@ h1, h2, h3, h4, h5, h6{
     margin: 0 auto;
 }
 .squire{
-    display: block;
     width: 9px;
     height: 9px;
     border-radius: 2px;
@@ -153,6 +149,7 @@ h1, h2, h3, h4, h5, h6{
     padding: 40px;
     background-color: #FAFAFE;
 }
+/*Central TOP*/
 .top{
     width: 100%;
     height: 62px;
@@ -163,13 +160,11 @@ h1, h2, h3, h4, h5, h6{
     align-items: center;
 }
 .top__title{
-    display: block;
     width: 259px;
     height: 62px;
     position: relative;
 }
 .top__title__top{
-    display: block;
     width: 136px;
     height: 32px;
     font-weight: 600;
@@ -180,14 +175,10 @@ h1, h2, h3, h4, h5, h6{
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
 }
 .top__title__bottom{
-    display: block;
     width: 100%;
     height: 20px;
-    font-weight: 300;
-    font-style: normal;
     font-weight: 300;
     font-size: 16px;
     line-height: 20px;
@@ -228,12 +219,14 @@ h1, h2, h3, h4, h5, h6{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+/*Central LOT*/
 .lot{
     display: flex;
     justify-content: space-between;
 
     width: 100%;
-    height: 347px;   
+    height: 347px;
+    margin-top: 40px;   
 }
 .lot__photo{
     width: 420px;
@@ -252,10 +245,10 @@ h1, h2, h3, h4, h5, h6{
     border-radius: 4px;
     position: relative;
 
+    /*матовое окно с часами*/
     background: rgba(255, 255, 255, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(20px);
-    /* Note: backdrop-filter has minimal browser support */
 
     position: absolute;
     left: 20px;
@@ -264,11 +257,9 @@ h1, h2, h3, h4, h5, h6{
 .backCount__inner{
     width: 147px;
     height: 28px;
-    font-style: normal;
     font-weight: 700;
     font-size: 22px;
     line-height: 28px;
-    /* identical to box height */
 
     letter-spacing: -0.01em;
     color: #FFFFFF;
@@ -286,8 +277,6 @@ h1, h2, h3, h4, h5, h6{
 .lot__name{
     width: 386px;
     height: 33px;
-    
-    font-style: normal;
     font-weight: 700;
     font-size: 26px;
     line-height: 33px;
@@ -312,7 +301,6 @@ h1, h2, h3, h4, h5, h6{
 .lot__currentBid__title{
     width: 75px;
     height: 18px;
-    font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
@@ -326,7 +314,6 @@ h1, h2, h3, h4, h5, h6{
 .lot__currentBid__price{
     width: 86px;
     height: 23px;
-    font-style: normal;
     font-weight: 600;
     font-size: 18px;
     line-height: 23px;
@@ -336,4 +323,455 @@ h1, h2, h3, h4, h5, h6{
     position: absolute;
     left: 20px;
     bottom: 15px;
+}
+.lot__currentBid__btn{
+    width: 141px;
+    height: 61px;
+    border-radius: 4px;
+    background: #3772FF;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+    border: none;
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.lot__date{
+    width: 100%;
+    height: 18px;
+    display: flex;
+
+    position: absolute;
+    top: 172px;
+    left: 0;
+}
+.lot__date__dote{
+    width: 12px;
+    height: 18px;
+}
+.lot__date__dote__inner{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-top: 2px;
+    background-color: #57CBE6;
+}
+.lot__date__text{
+    width: 324px;
+    height: 18px;
+    margin: 0 10px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.02em;
+    color: #AEAEAE;
+    text-align: left;
+}
+.lot__date__date{
+    width: 94px;
+    height: 18px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.02em;
+    text-align: right;
+    color: #373748;
+}
+.lot__metadate{
+    width: 100%;
+    height: 18px;
+    display: flex;
+
+    position: absolute;
+    top: 210px;
+    left: 0;
+}
+.lot__date__dote__inner.two{
+    background: #518BF7;
+}
+.lot__blochchain{
+    width: 100%;
+    height: 18px;
+    display: flex;
+
+    position: absolute;
+    top: 248px;
+    left: 0;
+}
+.lot__date__dote__inner.three{
+    background: #E1959C;
+}
+.lot__bottom{
+    width: 100%;
+    height: 48px;
+    display: flex;
+
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+}
+.lot__bottom__creator{
+    width: 299px;
+    height: 100%;
+    display: flex;
+}
+.lot__bottom__creator__1{
+    width: 48px;
+    height: 100%;
+    margin-right: 15px;
+}
+.creator__photo{
+    width: 48px;
+    height: 100%;
+    border-radius: 50%;
+}
+.lot__bottom__creator__2{
+    width: 236px;
+    height: 100%;
+    position: relative;
+}
+.fullName{
+    width: 113px;
+    height: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.03em;
+    color: #373748;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.creator{
+    width: 56px;
+    height: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.03em;
+    color: #AEAEAE;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;    
+}
+.lot__bottom__instancePrice{
+    width: 151px;
+    height: 100%;
+    display: flex;
+}
+.lot__bottom__instancePrice__1{
+    width: 48px;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #3772FF;
+    margin-right: 15px;
+    position: relative;
+}
+.eth__img{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.lot__bottom__instancePrice__2{
+    width: 88px;
+    height: 100%;
+    position: relative;
+}
+.eth__price{
+    width: 65px;
+    height: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.03em;
+    color: #373748;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.eth__instancePrice{
+    width: 88px;
+    height: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.03em;
+    color: #AEAEAE;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/*Central Separation__title*/
+.separation__bar{
+    width: 100%;
+    height: 28px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.separation__bar__title{
+    width: 831px;
+    height: 28px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: -0.03em;
+    color: #373748;
+}
+.separation__bar__viewAll{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.03em;
+    color: #AEAEAE;
+}
+
+/*Central BOTTOM*/
+.central__bottom{
+    width: 100%;
+    height: 396px;
+    display: flex;
+    justify-content: space-between;
+}
+.lot2{
+    width: 287px;
+    height: 396px;
+    padding: 15px;
+    background: #FFFFFF;
+    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.03);
+    border-radius: 8px;
+}
+/*Central BOTTOM Lot2__top*/
+.lot2__top{
+    width: 100%;
+    height: 38px;
+    display: flex;
+    align-items: center;
+}
+.lot2__top__photo{
+    width: 32px;
+    height: 32px;
+    margin-left: 5px;
+    margin-right: 15px;
+}
+.lot2__top__img{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+.lot2__top__data{
+    width: 95px;
+    height: 38px;
+    margin-right: 72px;
+    position: relative;
+}
+.lot2__top__name{
+    width: 95px;
+    height: 18px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.03em;
+    color: #373748;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.lot2__top__owner{
+    width: 37px;
+    height: 15px;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.03em;
+    color: #AEAEAE;
+    
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.lot2__top__like{
+    width: 33px;
+    height: 33px;
+    background: #F4F5FB;
+    border-radius: 2px;
+    position: relative;
+}
+.lot2__top__heart{
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/*Central BOTTOM Lot2__photo*/
+.lot2__photo{
+    width: 257px;
+    height: 200px;
+    margin: 15px 0;
+    position: relative;
+}
+.lot2__photo__img{
+    width: 257px;
+    height: 200px;
+    border-radius: 4px;
+}
+.lot2__photo__button{
+    width: 142px;
+    height: 40px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+    color: #FFFFFF;
+
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(15px);
+    /* backdrop-filter has minimal browser support */
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.lot2__name{
+    width: 247px;
+    height: 23px;
+    margin-left: 5px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: -0.03em;
+    color: #373748;
+}
+.lot2__name__vector{
+    width: 247px;
+    height: 15px;
+    margin-left: 5px;
+    border-bottom: 0.8px solid #D9D9D9;
+}
+.lot2__bottom{
+    width: 247px;
+    height: 40px;
+    margin-left: 5px;
+    margin-top: 15px;
+
+    display: flex;
+    justify-content: space-between;
+}
+.lot2__bottom__left{
+    width: 80px;
+    height: 40px;
+    position: relative;
+}
+.lot2__bottom__endingIn{
+    width: 51px;
+    height: 15px;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.03em;
+    color: #AEAEAE;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.lot2__bottom__timer{
+    width: 80px;
+    height: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.03em;
+    color: #373748;
+    
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.lot2__bottom__right{
+    width: 65px;
+    height: 40px;
+    position: relative;
+}
+.lot2__bottom__highestBid{
+    width: 65px;
+    height: 15px;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.03em;
+    color: #AEAEAE;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.lot2__bottom__price{
+    width: 65px;
+    height: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.03em;
+    color: #373748;
+    
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+/*Right*/
+.right{
+    padding: 40px 30px;
+    position: relative;
+}
+.right__top{
+    width: 100%;
+    height: 180px;
+    background: #C4C4C4;
+    border-radius: 8px;
+}
+.right__collector{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #fff;
+    position: relative;
+
+    position: absolute;
+    top: 170px;
+    left: 55px;
+    z-index: 1;
+}
+.right__collector__img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
